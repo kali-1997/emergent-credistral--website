@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Mail, MapPin, Twitter, Linkedin } from 'lucide-react'
+import { Mail, MapPin, Linkedin } from 'lucide-react'
 
 export default function Footer() {
   const cols = [
@@ -27,14 +27,21 @@ export default function Footer() {
                 maskPosition: 'center',
               }}
             />
-            <span className="font-bold tracking-wide text-xl text-white">CREDISTRAL</span>
+            <span className="font-bold tracking-wide text-[1.375rem] text-white">CREDISTRAL</span>
           </Link>
           <p className="mt-4 text-sm text-white/50 max-w-sm leading-relaxed">
             Building the AI Lending Intelligence Platform — helping lenders make faster, smarter and more transparent credit decisions.
           </p>
           <div className="mt-5 flex items-center gap-3 text-white/50">
-            <a href="#" className="w-9 h-9 rounded-lg glass hover:text-white transition"><Twitter className="w-4 h-4 m-auto mt-2.5" /></a>
-            <a href="#" className="w-9 h-9 rounded-lg glass hover:text-white transition"><Linkedin className="w-4 h-4 m-auto mt-2.5" /></a>
+            <a
+              href="https://www.linkedin.com/company/credistral/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Credistral on LinkedIn"
+              className="w-9 h-9 rounded-lg glass hover:text-white hover:border-[#06B6D4]/40 transition flex items-center justify-center"
+            >
+              <Linkedin className="w-4 h-4" />
+            </a>
           </div>
         </div>
 

@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Nav from '@/components/site/Nav'
 import Footer from '@/components/site/Footer'
-import { Mail, MapPin, Send, ArrowRight, Sparkles, CheckCircle2, ChevronDown } from 'lucide-react'
+import { Mail, MapPin, Send, ArrowRight, Sparkles, CheckCircle2, ChevronDown, Linkedin } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 const faqs = [
@@ -172,6 +172,13 @@ export default function ContactPage() {
                   <div>
                     <p className="text-xs text-white/50">Location</p>
                     <p className="font-medium">India</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#2563EB] to-[#14B8A6] flex items-center justify-center shrink-0"><Linkedin className="w-5 h-5"/></div>
+                  <div>
+                    <p className="text-xs text-white/50">LinkedIn</p>
+                    <a href="https://www.linkedin.com/company/credistral/" target="_blank" rel="noopener noreferrer" className="font-medium hover:text-[#06B6D4]">linkedin.com/company/credistral</a>
                   </div>
                 </div>
               </div>

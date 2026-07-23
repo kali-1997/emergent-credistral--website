@@ -39,7 +39,7 @@ export default function Nav() {
                 maskPosition: 'center',
               }}
             />
-            <span className="font-bold tracking-wide text-lg text-white">CREDISTRAL</span>
+            <span className="font-bold tracking-wide text-[1.25rem] text-white">CREDISTRAL</span>
           </Link>
 
           <nav className="hidden md:flex items-center gap-8">
