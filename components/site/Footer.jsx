@@ -13,11 +13,19 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-6 grid md:grid-cols-6 gap-10">
         <div className="md:col-span-3">
           <Link href="/" className="inline-flex items-center gap-2.5">
-            <img
-              src="/logo-mark.png"
-              alt="Credistral"
-              className="h-9 w-9 object-contain"
-              style={{ filter: 'brightness(0) invert(1)' }}
+            <span
+              aria-label="Credistral"
+              className="inline-block h-9 w-9 bg-white"
+              style={{
+                WebkitMaskImage: 'url(/logo-mark.png)',
+                maskImage: 'url(/logo-mark.png)',
+                WebkitMaskSize: 'contain',
+                maskSize: 'contain',
+                WebkitMaskRepeat: 'no-repeat',
+                maskRepeat: 'no-repeat',
+                WebkitMaskPosition: 'center',
+                maskPosition: 'center',
+              }}
             />
             <span className="font-bold tracking-wide text-xl text-white">CREDISTRAL</span>
           </Link>

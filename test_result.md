@@ -101,3 +101,41 @@
 #====================================================================================================
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
+
+user_problem_statement: "Credistral AI landing site — user reported logo is not appearing after logo was added to Nav and Footer components using CSS filter approach."
+
+frontend:
+  - task: "Credistral logo visible in Nav and Footer across all pages"
+    implemented: true
+    working: "NA"
+    file: "components/site/Nav.jsx, components/site/Footer.jsx"
+    stuck_count: 1
+    priority: "high"
+    needs_retesting: true
+    status_history:
+        -working: "NA"
+        -agent: "main"
+        -comment: "Initial: used <img src=/logo-mark.png> with CSS filter brightness(0) invert(1) to render dark-navy PNG as white on dark theme. Screenshot on preview showed it working."
+        -working: "NA"
+        -agent: "user"
+        -comment: "User reports logo is not appearing."
+        -working: "NA"
+        -agent: "main"
+        -comment: "Fix: switched from <img>+filter to a <span> with CSS mask-image (WebKit + std) targeting /logo-mark.png, bg-white ensures pure white silhouette. This is more robust across browsers and avoids any image loading/decoding issues. Verified /logo-mark.png returns HTTP 200. Need testing agent to verify logo visibility on all pages: /, /platform, /solutions, /technology, /about, /contact — in both nav (top-left) and footer."
+
+metadata:
+  created_by: "main_agent"
+  version: "1.0"
+  test_sequence: 1
+  run_ui: true
+
+test_plan:
+  current_focus:
+    - "Credistral logo visible in Nav and Footer across all pages"
+  stuck_tasks: []
+  test_all: false
+  test_priority: "high_first"
+
+agent_communication:
+    -agent: "main"
+    -message: "Please verify the Credistral logo mark (geometric icon) is visible in the top-left nav AND in the footer of every page: /, /platform, /solutions, /technology, /about, /contact. The logo should render as a WHITE geometric mark (using CSS mask-image with bg-white) followed by the CREDISTRAL wordmark. Also check /logo-mark.png loads with 200 status. Report whether logo mark appears clearly on all pages."
