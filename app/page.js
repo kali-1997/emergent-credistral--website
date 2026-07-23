@@ -2,6 +2,7 @@
 
 import { motion, useMotionValue, useTransform, animate } from 'framer-motion'
 import { useEffect, useState } from 'react'
+import Link from 'next/link'
 import {
   Sparkles, ShieldCheck, Brain, LineChart, AlertTriangle, FileCheck2,
   ArrowRight, Play, Menu, X, TrendingUp, TrendingDown, Activity,
@@ -9,6 +10,8 @@ import {
   CheckCircle2, ArrowUpRight, Bell
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import Nav from '@/components/site/Nav'
+import Footer from '@/components/site/Footer'
 
 // ------- Utility: animated number ----------
 function AnimatedNumber({ value, decimals = 0, suffix = '' }) {
@@ -794,11 +797,11 @@ function MiniFooter() {
 function App() {
   return (
     <main className="relative min-h-screen bg-[#0B1020] text-white">
-      <Navigation />
+      <Nav />
       <Hero />
       <Platform />
       <DashboardShowcase />
-      <MiniFooter />
+      <Footer />
     </main>
   )
 }
