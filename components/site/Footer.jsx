@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Sparkles, Mail, MapPin, Twitter, Linkedin } from 'lucide-react'
+import { Mail, MapPin, Twitter, Linkedin } from 'lucide-react'
 
 export default function Footer() {
   const cols = [
@@ -12,11 +12,14 @@ export default function Footer() {
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#06B6D4]/40 to-transparent" />
       <div className="mx-auto max-w-7xl px-6 grid md:grid-cols-6 gap-10">
         <div className="md:col-span-3">
-          <Link href="/" className="flex items-center gap-2">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#2563EB] via-[#06B6D4] to-[#14B8A6] flex items-center justify-center">
-              <Sparkles className="w-5 h-5" />
-            </div>
-            <span className="font-semibold tracking-tight text-lg">Credistral<span className="text-[#06B6D4]">.AI</span></span>
+          <Link href="/" className="inline-flex items-center gap-2.5">
+            <img
+              src="/logo-mark.png"
+              alt="Credistral"
+              className="h-9 w-9 object-contain"
+              style={{ filter: 'brightness(0) invert(1)' }}
+            />
+            <span className="font-bold tracking-wide text-xl text-white">CREDISTRAL</span>
           </Link>
           <p className="mt-4 text-sm text-white/50 max-w-sm leading-relaxed">
             Building the AI Lending Intelligence Platform — helping lenders make faster, smarter and more transparent credit decisions.

@@ -1,9 +1,10 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
-import { Sparkles, Menu, X, ArrowRight } from 'lucide-react'
+import { Menu, X, ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 const links = [
@@ -23,11 +24,14 @@ export default function Nav() {
     <header className="fixed top-0 left-0 right-0 z-50">
       <div className="mx-auto max-w-7xl px-6 pt-5">
         <div className="glass-strong rounded-2xl px-5 py-3 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <div className="relative w-9 h-9 rounded-xl bg-gradient-to-br from-[#2563EB] via-[#06B6D4] to-[#14B8A6] flex items-center justify-center">
-              <Sparkles className="w-5 h-5 text-white" />
-            </div>
-            <span className="font-semibold tracking-tight text-lg">Credistral<span className="text-[#06B6D4]">.AI</span></span>
+          <Link href="/" className="flex items-center gap-2.5 group">
+            <img
+              src="/logo-mark.png"
+              alt="Credistral"
+              className="h-8 w-8 object-contain"
+              style={{ filter: 'brightness(0) invert(1)' }}
+            />
+            <span className="font-bold tracking-wide text-lg text-white">CREDISTRAL</span>
           </Link>
 
           <nav className="hidden md:flex items-center gap-8">
