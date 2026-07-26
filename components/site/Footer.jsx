@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Mail, MapPin, Linkedin } from 'lucide-react'
+import { LOGO_MARK_DATA_URI } from '@/lib/logo-data'
 
 export default function Footer() {
   const cols = [
@@ -15,10 +16,10 @@ export default function Footer() {
           <Link href="/" className="inline-flex items-center gap-2.5">
             <span
               aria-label="Credistral"
-              className="inline-block h-9 w-9 bg-white"
+              className="inline-block h-9 w-9 bg-white shrink-0"
               style={{
-                WebkitMaskImage: 'url(/logo-mark.png)',
-                maskImage: 'url(/logo-mark.png)',
+                WebkitMaskImage: `url("${LOGO_MARK_DATA_URI}")`,
+                maskImage: `url("${LOGO_MARK_DATA_URI}")`,
                 WebkitMaskSize: 'contain',
                 maskSize: 'contain',
                 WebkitMaskRepeat: 'no-repeat',

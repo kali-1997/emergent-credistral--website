@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import { Menu, X, ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { LOGO_MARK_DATA_URI } from '@/lib/logo-data'
 
 const links = [
   { name: 'Home', href: '/' },
@@ -27,10 +28,10 @@ export default function Nav() {
           <Link href="/" className="flex items-center gap-2.5 group">
             <span
               aria-label="Credistral"
-              className="inline-block h-8 w-8 bg-white"
+              className="inline-block h-8 w-8 bg-white shrink-0"
               style={{
-                WebkitMaskImage: 'url(/logo-mark.png)',
-                maskImage: 'url(/logo-mark.png)',
+                WebkitMaskImage: `url("${LOGO_MARK_DATA_URI}")`,
+                maskImage: `url("${LOGO_MARK_DATA_URI}")`,
                 WebkitMaskSize: 'contain',
                 maskSize: 'contain',
                 WebkitMaskRepeat: 'no-repeat',

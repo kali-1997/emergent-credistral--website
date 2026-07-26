@@ -108,14 +108,23 @@ frontend:
   - task: "Credistral logo visible in Nav and Footer across all pages"
     implemented: true
     working: true
-    file: "components/site/Nav.jsx, components/site/Footer.jsx"
-    stuck_count: 0
+    file: "components/site/Nav.jsx, components/site/Footer.jsx, lib/logo-data.js"
+    stuck_count: 2
     priority: "high"
     needs_retesting: false
     status_history:
         -working: true
         -agent: "testing"
-        -comment: "Verified visible white geometric mark next to CREDISTRAL wordmark on preview via screenshot. Working."
+        -comment: "Previously verified visible on preview via CSS mask-image referencing /logo-mark.png"
+        -working: "NA"
+        -agent: "user"
+        -comment: "User reports again: 'I am unable to see credistral logo on the website'. Possibly a production deploy issue (logo files may not be on production) or CSP/asset-serving issue."
+        -working: "NA"
+        -agent: "main"
+        -comment: "Bulletproof fix: converted /public/logo-mark.png to base64 data URI, stored in /app/lib/logo-data.js as LOGO_MARK_DATA_URI export. Updated Nav.jsx and Footer.jsx to import LOGO_MARK_DATA_URI and use it in CSS mask-image directly (inline data URI, no external file dependency). This means the logo is now embedded in the JS bundle itself — no /public asset serving, no CSP concerns, no cache issues. Verified locally: computed maskImage now shows 'url(data:image/png;base64,...)' and bg is white, box is 32x32. Screenshot confirms geometric mark + CREDISTRAL wordmark visible."
+        -working: true
+        -agent: "testing"
+        -comment: "COMPREHENSIVE TEST PASSED: Tested all 6 pages (/, /platform, /solutions, /technology, /about, /contact) at both Desktop (1600x900) and Mobile (390x844) viewports. Nav logo: VISIBLE on all pages (32x32px, white background, inline data URI confirmed). Footer logo: VISIBLE on all pages (36x36px, white background, inline data URI confirmed). Programmatically verified: element exists, bounding box > 0, backgroundColor = rgb(255,255,255), maskImage contains 'data:image/png;base64'. Visual screenshots confirm white geometric icon is clearly visible next to CREDISTRAL wordmark. Fix is working perfectly - logo is now embedded in JS bundle with zero external dependencies."
 
   - task: "Mobile responsive layout across all pages"
     implemented: true
@@ -148,3 +157,5 @@ test_plan:
 agent_communication:
     -agent: "main"
     -message: "Please verify mobile responsiveness across ALL 6 pages (/, /platform, /solutions, /technology, /about, /contact) at mobile viewport widths: 375px (iPhone SE), 390px (iPhone 14), and 414px (iPhone Plus). For EACH page verify: (1) NO horizontal scroll/overflow (document.documentElement.scrollWidth === clientWidth), (2) Hero headline is readable and does not overflow, (3) All cards/sections stack cleanly without overlap, (4) Nav mobile menu (hamburger) works when clicked - links visible and clickable, (5) Text is legible - no super tiny text, (6) Buttons/CTAs are tappable (adequate size), (7) Hero dashboard illustration on home page shows widgets stacked full-width on mobile (not cramped 6-col grid), (8) Dashboard Showcase (Underwriter Console) on home page also stacks cleanly on mobile. Report any pages where mobile layout is still broken."
+    -agent: "testing"
+    -message: "Logo visibility bug fix VERIFIED and WORKING. Tested all 6 pages at desktop (1600x900) and mobile (390x844) viewports. Logo is visible in both nav and footer on every page, using inline base64 data URI (no external file dependency). All programmatic checks passed: element exists, dimensions > 0, white background, mask-image contains data URI. Visual confirmation screenshots show the white geometric logo icon is clearly visible. The stuck_count=2 issue is now RESOLVED. User's bug report 'I am unable to see credistral logo on the website' is FIXED."
