@@ -55,18 +55,18 @@ export default function SolutionsPage() {
     <main className="relative min-h-screen bg-[#0B1020] text-white overflow-x-hidden">
       <Nav/>
 
-      <section className="relative pt-36 pb-16 bg-hero-glow">
+      <section className="relative pt-28 md:pt-36 pb-12 md:pb-16 bg-hero-glow">
         <div className="absolute inset-0 grid-bg"/>
         <div className="relative mx-auto max-w-5xl px-6 text-center">
           <div className="inline-flex items-center gap-2 glass rounded-full px-3 py-1.5 text-xs text-white/80 mb-6">
             <Sparkles className="w-3 h-3 text-[#06B6D4]"/> Solutions
           </div>
-          <h1 className="text-5xl md:text-6xl font-semibold tracking-tight leading-[1.05]">Purpose-built for <span className="text-gradient-brand">every kind of lender.</span></h1>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight leading-[1.05]">Purpose-built for <span className="text-gradient-brand">every kind of lender.</span></h1>
           <p className="mt-6 text-lg text-white/70 max-w-2xl mx-auto">Whether you’re a bank modernising credit, an NBFC scaling operations or a digital platform launching new products — the platform is being designed to adapt.</p>
         </div>
       </section>
 
-      <section className="py-16">
+      <section className="py-12 md:py-16">
         <div className="mx-auto max-w-7xl px-6 space-y-6">
           {solutions.map((s, i) => {
             const Icon = s.icon
@@ -76,7 +76,7 @@ export default function SolutionsPage() {
                 whileInView={{opacity:1, y:0}}
                 viewport={{once:true, margin:'-60px'}}
                 transition={{delay: 0.05}}
-                className="glass-strong rounded-3xl p-8 md:p-10 relative overflow-hidden"
+                className="glass-strong rounded-3xl p-5 sm:p-8 md:p-10 relative overflow-hidden"
               >
                 <div className={`absolute -top-16 -right-16 w-60 h-60 rounded-full bg-gradient-to-br ${s.color} opacity-10 blur-3xl`}/>
                 <div className="relative grid md:grid-cols-12 gap-6">
@@ -125,12 +125,12 @@ export default function SolutionsPage() {
         </div>
       </section>
 
-      <section className="py-20">
+      <section className="py-14 md:py-20">
         <div className="mx-auto max-w-4xl px-6">
-          <div className="glass-strong rounded-3xl p-10 text-center relative overflow-hidden">
+          <div className="glass-strong rounded-3xl p-6 sm:p-10 text-center relative overflow-hidden">
             <div className="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-[#06B6D4]/20 blur-3xl"/>
             <div className="relative">
-              <h2 className="text-3xl md:text-4xl font-semibold">Which of these best describes you?</h2>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold">Which of these best describes you?</h2>
               <p className="mt-3 text-white/60 max-w-xl mx-auto">Let’s explore how Credistral AI can fit into your credit workflows.</p>
               <div className="mt-6 flex flex-wrap justify-center gap-3">
                 <Link href="/contact"><Button className="bg-gradient-to-r from-[#2563EB] to-[#06B6D4] btn-primary-glow rounded-xl h-12 px-6 border-0">Book a Demo <ArrowRight className="w-4 h-4 ml-2"/></Button></Link>

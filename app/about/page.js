@@ -22,13 +22,13 @@ export default function AboutPage() {
       <Nav/>
 
       {/* Hero */}
-      <section className="relative pt-36 pb-16 bg-hero-glow">
+      <section className="relative pt-28 md:pt-36 pb-12 md:pb-16 bg-hero-glow">
         <div className="absolute inset-0 grid-bg"/>
         <div className="relative mx-auto max-w-5xl px-6 text-center">
           <div className="inline-flex items-center gap-2 glass rounded-full px-3 py-1.5 text-xs text-white/80 mb-6">
             <Compass className="w-3 h-3 text-[#06B6D4]"/> About Credistral AI
           </div>
-          <h1 className="text-5xl md:text-6xl font-semibold tracking-tight leading-[1.05]">Our <span className="text-gradient-brand">Vision</span></h1>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight leading-[1.05]">Our <span className="text-gradient-brand">Vision</span></h1>
           <p className="mt-6 text-lg text-white/70 max-w-2xl mx-auto">
             Credistral AI was created with a simple mission — to make lending faster, fairer and more transparent through responsible AI.
           </p>
@@ -36,7 +36,7 @@ export default function AboutPage() {
       </section>
 
       {/* Story sections */}
-      <section className="py-16">
+      <section className="py-12 md:py-16">
         <div className="mx-auto max-w-5xl px-6 space-y-6">
           {[
             {
@@ -62,7 +62,7 @@ export default function AboutPage() {
                 whileInView={{opacity:1, y:0}}
                 viewport={{once:true}}
                 transition={{delay:i*0.08}}
-                className="glass-strong rounded-3xl p-8 md:p-10 relative overflow-hidden">
+                className="glass-strong rounded-3xl p-5 sm:p-8 md:p-10 relative overflow-hidden">
                 <div className="absolute -top-20 -right-20 w-72 h-72 rounded-full bg-gradient-to-br from-[#2563EB]/20 to-[#06B6D4]/10 blur-3xl"/>
                 <div className="relative grid md:grid-cols-12 gap-8 items-start">
                   <div className="md:col-span-3">
@@ -83,14 +83,14 @@ export default function AboutPage() {
       </section>
 
       {/* Roadmap */}
-      <section className="py-24 relative">
+      <section className="py-16 md:py-24 relative">
         <div className="absolute inset-0 bg-hero-glow opacity-30"/>
         <div className="relative mx-auto max-w-4xl px-6">
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 glass rounded-full px-3 py-1.5 text-xs text-white/80 mb-4">
               <Sparkles className="w-3 h-3 text-[#14B8A6]"/> Roadmap
             </div>
-            <h2 className="text-4xl font-semibold tracking-tight">Where we <span className="text-gradient">are today.</span></h2>
+            <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight">Where we <span className="text-gradient">are today.</span></h2>
             <p className="mt-3 text-white/60 max-w-xl mx-auto">Credistral AI is an early-stage company. We’re transparent about what’s done, what’s in progress and what’s planned.</p>
           </div>
 
@@ -131,7 +131,7 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="py-16">
+      <section className="py-12 md:py-16">
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid md:grid-cols-3 gap-5">
             {[
@@ -156,12 +156,12 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-20">
+      <section className="py-14 md:py-20">
         <div className="mx-auto max-w-4xl px-6">
-          <div className="glass-strong rounded-3xl p-10 text-center relative overflow-hidden">
+          <div className="glass-strong rounded-3xl p-6 sm:p-10 text-center relative overflow-hidden">
             <div className="absolute -top-24 -left-24 w-80 h-80 rounded-full bg-[#2563EB]/20 blur-3xl"/>
             <div className="relative">
-              <h2 className="text-3xl md:text-4xl font-semibold">Want to build the future of lending with us?</h2>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold">Want to build the future of lending with us?</h2>
               <p className="mt-3 text-white/60 max-w-xl mx-auto">We’re looking for design partners, early pilots and thoughtful conversations. Reach out.</p>
               <div className="mt-6 flex flex-wrap justify-center gap-3">
                 <Link href="/contact"><Button className="bg-gradient-to-r from-[#2563EB] to-[#06B6D4] btn-primary-glow rounded-xl h-12 px-6 border-0">Get in Touch <ArrowRight className="w-4 h-4 ml-2"/></Button></Link>

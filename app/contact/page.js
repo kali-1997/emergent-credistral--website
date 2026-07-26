@@ -83,19 +83,19 @@ export default function ContactPage() {
     <main className="relative min-h-screen bg-[#0B1020] text-white overflow-x-hidden">
       <Nav/>
 
-      <section className="relative pt-36 pb-16 bg-hero-glow">
+      <section className="relative pt-28 md:pt-36 pb-12 md:pb-16 bg-hero-glow">
         <div className="absolute inset-0 grid-bg"/>
         <div className="relative mx-auto max-w-5xl px-6 text-center">
           <div className="inline-flex items-center gap-2 glass rounded-full px-3 py-1.5 text-xs text-white/80 mb-6">
             <Sparkles className="w-3 h-3 text-[#06B6D4]"/> Contact
           </div>
-          <h1 className="text-5xl md:text-6xl font-semibold tracking-tight leading-[1.05]">Let’s <span className="text-gradient-brand">Build the Future</span> of Lending Together</h1>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight leading-[1.05]">Let’s <span className="text-gradient-brand">Build the Future</span> of Lending Together</h1>
           <p className="mt-6 text-lg text-white/70 max-w-2xl mx-auto">Interested in learning more about Credistral AI? We’d love to hear from you.</p>
         </div>
       </section>
 
       {/* Form + Info */}
-      <section className="py-16">
+      <section className="py-12 md:py-16">
         <div className="mx-auto max-w-6xl px-6 grid lg:grid-cols-5 gap-8">
           <motion.div
             initial={{opacity:0, y:20}}
@@ -198,14 +198,14 @@ export default function ContactPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-24 relative">
+      <section className="py-16 md:py-24 relative">
         <div className="absolute inset-0 bg-hero-glow opacity-30"/>
         <div className="relative mx-auto max-w-3xl px-6">
           <div className="text-center mb-10">
             <div className="inline-flex items-center gap-2 glass rounded-full px-3 py-1.5 text-xs text-white/80 mb-4">
               <Sparkles className="w-3 h-3 text-[#14B8A6]"/> FAQ
             </div>
-            <h2 className="text-4xl font-semibold tracking-tight">Frequently asked <span className="text-gradient">questions.</span></h2>
+            <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight">Frequently asked <span className="text-gradient">questions.</span></h2>
           </div>
           <div className="space-y-3">
             {faqs.map((f, i) => <FaqItem key={f.q} {...f} i={i}/>)}

@@ -122,13 +122,13 @@ export default function PlatformPage() {
       <Nav />
 
       {/* Hero */}
-      <section className="relative pt-36 pb-16 bg-hero-glow">
+      <section className="relative pt-28 md:pt-36 pb-12 md:pb-16 bg-hero-glow">
         <div className="absolute inset-0 grid-bg" />
         <div className="relative mx-auto max-w-5xl px-6 text-center">
           <motion.div initial={{opacity:0, y:20}} animate={{opacity:1, y:0}} className="inline-flex items-center gap-2 glass rounded-full px-3 py-1.5 text-xs text-white/80 mb-6">
             <Sparkles className="w-3 h-3 text-[#06B6D4]"/> Platform Overview
           </motion.div>
-          <motion.h1 initial={{opacity:0, y:20}} animate={{opacity:1, y:0}} transition={{delay:0.1}} className="text-5xl md:text-6xl font-semibold tracking-tight leading-[1.05]">
+          <motion.h1 initial={{opacity:0, y:20}} animate={{opacity:1, y:0}} transition={{delay:0.1}} className="text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight leading-[1.05]">
             The Future of <span className="text-gradient-brand">Lending Starts Here</span>
           </motion.h1>
           <motion.p initial={{opacity:0, y:20}} animate={{opacity:1, y:0}} transition={{delay:0.2}} className="mt-6 text-lg text-white/70 max-w-2xl mx-auto">
@@ -138,10 +138,10 @@ export default function PlatformPage() {
       </section>
 
       {/* Modules */}
-      <section className="py-16">
+      <section className="py-12 md:py-16">
         <div className="mx-auto max-w-7xl px-6">
           <div className="max-w-2xl mb-14">
-            <h2 className="text-4xl font-semibold tracking-tight">Six modules. <span className="text-gradient">One intelligent platform.</span></h2>
+            <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight">Six modules. <span className="text-gradient">One intelligent platform.</span></h2>
             <p className="mt-3 text-white/60">Each module is being designed to work independently or as part of an integrated AI credit stack.</p>
           </div>
           <div className="grid md:grid-cols-2 gap-5">
@@ -184,14 +184,14 @@ export default function PlatformPage() {
       </section>
 
       {/* Workflow */}
-      <section className="py-24 relative">
+      <section className="py-16 md:py-24 relative">
         <div className="absolute inset-0 bg-hero-glow opacity-30"/>
         <div className="relative mx-auto max-w-4xl px-6">
           <div className="text-center mb-14">
             <div className="inline-flex items-center gap-2 glass rounded-full px-3 py-1.5 text-xs text-white/80 mb-4">
               <ArrowRight className="w-3 h-3 text-[#14B8A6]"/> Product Workflow
             </div>
-            <h2 className="text-4xl font-semibold tracking-tight">From application to <span className="text-gradient">approved loan.</span></h2>
+            <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight">From application to <span className="text-gradient">approved loan.</span></h2>
           </div>
 
           <div className="space-y-3">
@@ -227,13 +227,13 @@ export default function PlatformPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20">
+      <section className="py-14 md:py-20">
         <div className="mx-auto max-w-4xl px-6">
-          <div className="glass-strong rounded-3xl p-10 text-center relative overflow-hidden">
+          <div className="glass-strong rounded-3xl p-6 sm:p-10 text-center relative overflow-hidden">
             <div className="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-[#2563EB]/20 blur-3xl"/>
             <div className="absolute -bottom-24 -left-24 w-80 h-80 rounded-full bg-[#14B8A6]/20 blur-3xl"/>
             <div className="relative">
-              <h2 className="text-3xl md:text-4xl font-semibold">Interested in seeing an early preview?</h2>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold">Interested in seeing an early preview?</h2>
               <p className="mt-3 text-white/60 max-w-xl mx-auto">We’re currently onboarding design partners and pilot lenders. Let’s explore whether Credistral AI fits your credit stack.</p>
               <div className="mt-6 flex flex-wrap justify-center gap-3">
                 <Link href="/contact"><Button className="bg-gradient-to-r from-[#2563EB] to-[#06B6D4] btn-primary-glow rounded-xl h-12 px-6 border-0">Book a Demo <ArrowRight className="w-4 h-4 ml-2"/></Button></Link>

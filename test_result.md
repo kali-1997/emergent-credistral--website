@@ -107,35 +107,44 @@ user_problem_statement: "Credistral AI landing site — user reported logo is no
 frontend:
   - task: "Credistral logo visible in Nav and Footer across all pages"
     implemented: true
-    working: "NA"
+    working: true
     file: "components/site/Nav.jsx, components/site/Footer.jsx"
-    stuck_count: 1
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+        -working: true
+        -agent: "testing"
+        -comment: "Verified visible white geometric mark next to CREDISTRAL wordmark on preview via screenshot. Working."
+
+  - task: "Mobile responsive layout across all pages"
+    implemented: true
+    working: "NA"
+    file: "app/page.js, app/platform/page.js, app/technology/page.js, app/solutions/page.js, app/about/page.js, app/contact/page.js"
+    stuck_count: 0
     priority: "high"
     needs_retesting: true
     status_history:
         -working: "NA"
-        -agent: "main"
-        -comment: "Initial: used <img src=/logo-mark.png> with CSS filter brightness(0) invert(1) to render dark-navy PNG as white on dark theme. Screenshot on preview showed it working."
-        -working: "NA"
         -agent: "user"
-        -comment: "User reports logo is not appearing."
+        -comment: "User reported: 'this website doesnt fit appropriately on mobike devices. It should be able to have mobile view for mobiles phones as well'."
         -working: "NA"
         -agent: "main"
-        -comment: "Fix: switched from <img>+filter to a <span> with CSS mask-image (WebKit + std) targeting /logo-mark.png, bg-white ensures pure white silhouette. This is more robust across browsers and avoids any image loading/decoding issues. Verified /logo-mark.png returns HTTP 200. Need testing agent to verify logo visibility on all pages: /, /platform, /solutions, /technology, /about, /contact — in both nav (top-left) and footer."
+        -comment: "Mobile fixes applied: (1) Hero dashboard: col-span-3/4/2 changed to col-span-6 sm:col-span-X (each widget full-width on mobile, original grid on sm+). (2) Dashboard showcase (Underwriter Console): col-span-6 lg:col-span-3 changed to col-span-12 sm:col-span-6 lg:col-span-3. (3) Hero headline text-5xl md:text-6xl lg:text-7xl -> text-4xl sm:text-5xl md:text-6xl lg:text-7xl. (4) Section H2 sizes reduced on mobile (text-3xl sm:text-4xl instead of text-4xl). (5) Section padding reduced on mobile: py-24/py-28 -> py-16 md:py-24/28; pt-36 -> pt-28 md:pt-36. (6) Big CTA glass card padding p-10 -> p-6 sm:p-10. (7) Applied across all 6 pages: home, platform, technology, solutions, about, contact. Verified no horizontal overflow at 390px (iPhone 14) width."
 
 metadata:
   created_by: "main_agent"
-  version: "1.0"
-  test_sequence: 1
+  version: "1.1"
+  test_sequence: 2
   run_ui: true
 
 test_plan:
   current_focus:
-    - "Credistral logo visible in Nav and Footer across all pages"
+    - "Mobile responsive layout across all pages"
   stuck_tasks: []
   test_all: false
   test_priority: "high_first"
 
 agent_communication:
     -agent: "main"
-    -message: "Please verify the Credistral logo mark (geometric icon) is visible in the top-left nav AND in the footer of every page: /, /platform, /solutions, /technology, /about, /contact. The logo should render as a WHITE geometric mark (using CSS mask-image with bg-white) followed by the CREDISTRAL wordmark. Also check /logo-mark.png loads with 200 status. Report whether logo mark appears clearly on all pages."
+    -message: "Please verify mobile responsiveness across ALL 6 pages (/, /platform, /solutions, /technology, /about, /contact) at mobile viewport widths: 375px (iPhone SE), 390px (iPhone 14), and 414px (iPhone Plus). For EACH page verify: (1) NO horizontal scroll/overflow (document.documentElement.scrollWidth === clientWidth), (2) Hero headline is readable and does not overflow, (3) All cards/sections stack cleanly without overlap, (4) Nav mobile menu (hamburger) works when clicked - links visible and clickable, (5) Text is legible - no super tiny text, (6) Buttons/CTAs are tappable (adequate size), (7) Hero dashboard illustration on home page shows widgets stacked full-width on mobile (not cramped 6-col grid), (8) Dashboard Showcase (Underwriter Console) on home page also stacks cleanly on mobile. Report any pages where mobile layout is still broken."

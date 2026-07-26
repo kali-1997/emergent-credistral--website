@@ -34,22 +34,22 @@ export default function TechnologyPage() {
     <main className="relative min-h-screen bg-[#0B1020] text-white overflow-x-hidden">
       <Nav/>
 
-      <section className="relative pt-36 pb-16 bg-hero-glow">
+      <section className="relative pt-28 md:pt-36 pb-12 md:pb-16 bg-hero-glow">
         <div className="absolute inset-0 grid-bg"/>
         <div className="relative mx-auto max-w-5xl px-6 text-center">
           <div className="inline-flex items-center gap-2 glass rounded-full px-3 py-1.5 text-xs text-white/80 mb-6">
             <Cpu className="w-3 h-3 text-[#06B6D4]"/> Technology
           </div>
-          <h1 className="text-5xl md:text-6xl font-semibold tracking-tight leading-[1.05]">Built on <span className="text-gradient-brand">modern, secure infrastructure.</span></h1>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight leading-[1.05]">Built on <span className="text-gradient-brand">modern, secure infrastructure.</span></h1>
           <p className="mt-6 text-lg text-white/70 max-w-2xl mx-auto">A layered architecture that ingests financial data, runs AI models and returns explainable credit intelligence — designed with security, auditability and integration in mind.</p>
         </div>
       </section>
 
       {/* Architecture */}
-      <section className="py-20">
+      <section className="py-14 md:py-20">
         <div className="mx-auto max-w-4xl px-6">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-semibold tracking-tight">Platform <span className="text-gradient">Architecture</span></h2>
+            <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight">Platform <span className="text-gradient">Architecture</span></h2>
             <p className="mt-3 text-white/60">Data flows through a series of dedicated layers, each specialising in a step of the credit decision.</p>
           </div>
 
@@ -90,11 +90,11 @@ export default function TechnologyPage() {
       </section>
 
       {/* Capabilities */}
-      <section className="py-24 relative">
+      <section className="py-16 md:py-24 relative">
         <div className="absolute inset-0 bg-hero-glow opacity-30"/>
         <div className="relative mx-auto max-w-7xl px-6">
           <div className="max-w-2xl mb-12">
-            <h2 className="text-4xl font-semibold tracking-tight">Core <span className="text-gradient">Capabilities</span></h2>
+            <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight">Core <span className="text-gradient">Capabilities</span></h2>
             <p className="mt-3 text-white/60">The engineering foundations we’re building the platform on.</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -120,7 +120,7 @@ export default function TechnologyPage() {
       </section>
 
       {/* Tech logos */}
-      <section className="py-20">
+      <section className="py-14 md:py-20">
         <div className="mx-auto max-w-6xl px-6">
           <div className="text-center mb-10">
             <p className="text-xs uppercase tracking-widest text-white/40">Our Stack</p>

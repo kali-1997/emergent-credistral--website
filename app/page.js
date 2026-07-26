@@ -79,7 +79,7 @@ function HeroDashboard() {
       {/* Ambient glow behind */}
       <div className="absolute -inset-8 bg-gradient-to-br from-[#2563EB]/30 via-[#06B6D4]/20 to-[#14B8A6]/20 blur-3xl rounded-full" />
 
-      <div className="relative glass-strong rounded-3xl p-5 shadow-2xl">
+      <div className="relative glass-strong rounded-3xl p-3 sm:p-5 shadow-2xl">
         {/* Top bar */}
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-2">
@@ -100,7 +100,7 @@ function HeroDashboard() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.5 }}
-            className="col-span-3 glass rounded-2xl p-4"
+            className="col-span-6 sm:col-span-3 glass rounded-2xl p-4"
           >
             <div className="flex items-center justify-between mb-1">
               <p className="text-xs text-white/60">Borrower Risk Score</p>
@@ -146,7 +146,7 @@ function HeroDashboard() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.6 }}
-            className="col-span-3 glass rounded-2xl p-4 relative"
+            className="col-span-6 sm:col-span-3 glass rounded-2xl p-4 relative"
           >
             <div className="flex items-center justify-between">
               <p className="text-xs text-white/60">AI Recommendation</p>
@@ -167,7 +167,7 @@ function HeroDashboard() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.75 }}
-            className="col-span-4 glass rounded-2xl p-4"
+            className="col-span-6 sm:col-span-4 glass rounded-2xl p-4"
           >
             <div className="flex items-center justify-between mb-2">
               <div>
@@ -221,7 +221,7 @@ function HeroDashboard() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.85 }}
-            className="col-span-2 glass rounded-2xl p-4"
+            className="col-span-6 sm:col-span-2 glass rounded-2xl p-4"
           >
             <div className="flex items-center justify-between">
               <p className="text-xs text-white/60">Fraud Alerts</p>
@@ -249,7 +249,7 @@ function HeroDashboard() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.95 }}
-            className="col-span-3 glass rounded-2xl p-4"
+            className="col-span-6 sm:col-span-3 glass rounded-2xl p-4"
           >
             <div className="flex items-center justify-between mb-2">
               <p className="text-xs text-white/60">Portfolio Health</p>
@@ -277,7 +277,7 @@ function HeroDashboard() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.05 }}
-            className="col-span-3 glass rounded-2xl p-4"
+            className="col-span-6 sm:col-span-3 glass rounded-2xl p-4"
           >
             <div className="flex items-center justify-between">
               <p className="text-xs text-white/60">EMI Burden Ratio</p>
@@ -338,7 +338,7 @@ function HeroDashboard() {
 // ------- Hero ----------
 function Hero() {
   return (
-    <section id="home" className="relative pt-32 pb-24 bg-hero-glow overflow-hidden">
+    <section id="home" className="relative pt-28 md:pt-32 pb-16 md:pb-24 bg-hero-glow overflow-hidden">
       <div className="absolute inset-0 grid-bg" />
       <div className="relative mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-16 items-center">
         <div>
@@ -357,7 +357,7 @@ function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tight leading-[1.05]"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tight leading-[1.05]"
           >
             The <span className="text-gradient-brand">AI Operating System</span> for Modern Lending
           </motion.h1>
@@ -406,7 +406,7 @@ const platformFeatures = [
 
 function Platform() {
   return (
-    <section id="platform" className="relative py-28">
+    <section id="platform" className="relative py-16 md:py-28">
       <div className="mx-auto max-w-7xl px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -417,7 +417,7 @@ function Platform() {
           <div className="inline-flex items-center gap-2 glass rounded-full px-3 py-1.5 text-xs text-white/80 mb-4">
             <Sparkles className="w-3 h-3 text-[#06B6D4]" /> Platform
           </div>
-          <h2 className="text-4xl md:text-5xl font-semibold tracking-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight">
             One Platform. <span className="text-gradient">Complete Lending Intelligence.</span>
           </h2>
           <p className="mt-4 text-white/60 text-lg">
@@ -457,7 +457,7 @@ function Platform() {
 // ------- Dashboard Showcase ----------
 function DashboardShowcase() {
   return (
-    <section id="dashboard" className="relative py-28">
+    <section id="dashboard" className="relative py-16 md:py-28">
       <div className="absolute inset-0 bg-hero-glow opacity-40" />
       <div className="relative mx-auto max-w-7xl px-6">
         <motion.div
@@ -469,7 +469,7 @@ function DashboardShowcase() {
           <div className="inline-flex items-center gap-2 glass rounded-full px-3 py-1.5 text-xs text-white/80 mb-4">
             <Activity className="w-3 h-3 text-[#14B8A6]" /> Live Product Preview
           </div>
-          <h2 className="text-4xl md:text-5xl font-semibold tracking-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight">
             See <span className="text-gradient">every borrower, every loan,</span> every signal.
           </h2>
           <p className="mt-4 text-white/60 text-lg">
@@ -485,13 +485,13 @@ function DashboardShowcase() {
           className="relative"
         >
           <div className="absolute -inset-6 bg-gradient-to-br from-[#2563EB]/20 via-[#06B6D4]/10 to-[#14B8A6]/20 blur-3xl rounded-full" />
-          <div className="relative glass-strong rounded-3xl p-6">
+          <div className="relative glass-strong rounded-3xl p-4 sm:p-6">
             {/* Dashboard header */}
             <div className="flex items-center justify-between border-b border-white/5 pb-4 mb-5">
               <div>
                 <p className="text-xs text-white/50">Underwriter Console</p>
                 <div className="flex items-center gap-3 mt-1">
-                  <h3 className="text-xl font-semibold">Priya Ramesh · Loan #CR-208934</h3>
+                  <h3 className="text-base sm:text-xl font-semibold">Priya Ramesh · Loan #CR-208934</h3>
                   <span className="px-2 py-0.5 rounded-full text-[10px] bg-emerald-500/15 text-emerald-300 border border-emerald-400/20">In Review</span>
                 </div>
               </div>
@@ -570,7 +570,7 @@ function DashboardShowcase() {
               </div>
 
               {/* Risk Score */}
-              <div className="col-span-6 lg:col-span-3 glass rounded-2xl p-5">
+              <div className="col-span-12 sm:col-span-6 lg:col-span-3 glass rounded-2xl p-4 sm:p-5">
                 <p className="text-xs text-white/50">Risk Score</p>
                 <div className="mt-2 relative flex items-center justify-center">
                   <svg viewBox="0 0 120 120" className="w-32 h-32">
@@ -658,7 +658,7 @@ function DashboardShowcase() {
               </div>
 
               {/* EMI Burden */}
-              <div className="col-span-6 lg:col-span-3 glass rounded-2xl p-5">
+              <div className="col-span-12 sm:col-span-6 lg:col-span-3 glass rounded-2xl p-4 sm:p-5">
                 <p className="text-xs text-white/50">EMI Burden</p>
                 <p className="mt-1 text-3xl font-semibold">18%</p>
                 <p className="text-[11px] text-emerald-400 mt-0.5">22 pts below ceiling</p>
@@ -672,7 +672,7 @@ function DashboardShowcase() {
               </div>
 
               {/* Approval Probability */}
-              <div className="col-span-6 lg:col-span-3 glass rounded-2xl p-5">
+              <div className="col-span-12 sm:col-span-6 lg:col-span-3 glass rounded-2xl p-4 sm:p-5">
                 <p className="text-xs text-white/50">Approval Probability</p>
                 <div className="mt-2 flex items-baseline gap-2">
                   <span className="text-4xl font-semibold"><AnimatedNumber value={94} suffix="%" /></span>
